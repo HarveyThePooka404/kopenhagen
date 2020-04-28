@@ -124,4 +124,12 @@ body {
     .navbar-links.active {
         display: flex;
     }
+
+    .logo {
+        margin: .5rem;
+    }
+
+    .sublink {
+        text-align: center;
+    }
 }
