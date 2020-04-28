@@ -5,6 +5,7 @@ fetch("https://owldesign.dk/wordpress/wp-json/wp/v2/art_exhibition")
 function handleData(posts) {
  console.log(posts);
 posts.forEach(showPost)
+
 }
 
 function showPost(post){
