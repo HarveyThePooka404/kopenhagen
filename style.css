@@ -103,6 +103,7 @@ body {
 @media (max-width: 600px) {
     .toggle-button {
         display: flex;
+        margin-top: .5rem;
     }
 
     .navbar-links {
@@ -133,7 +134,7 @@ body {
     }
 
     .logo {
-        margin: .5rem;
+        width: 300px;
     }
 
     .sublink {
