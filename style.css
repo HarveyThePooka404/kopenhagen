@@ -13,3 +13,40 @@
 }
 
 /* -------------------------------------- -------------------------------------*/
+
+
+/*------------------------------------- Cartridge Styling -------------------------------------*/
+section {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fill,minmax(800px, 300px, 1fr));
+}
+
+.cartridge{
+    display: grid;
+    grid-template-areas: 1/1;
+    margin: 1rem;
+    padding: 1rem;
+    max-height: 25vh;
+    overflow: hidden;
+}
+
+.post_img {
+    grid-area: 1/1;
+    z-index: 1;
+    width: 100% ;
+    align-self: center;
+    order: -1;
+    top: -50%;
+}
+
+.post_text {
+    grid-area: 1/1;
+  z-index: 2;
+  position: relative;
+}
+
+.id {
+    display: none;
+}
+
