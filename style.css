@@ -259,3 +259,199 @@ right-col h1 {
         margin-top: 50px;
     }
 }
+
+/* --------------------- Desktop calendar page --------------------------------------- */
+/* --------------------- Desktop calendar page --------------------------------------- */
+/* --------------------- Desktop calendar page --------------------------------------- */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    height: 75vh;
+    width: auto;
+    margin: 0 7.3vw 0 7.3vw;
+    overflow: hidden;
+}
+
+/* ------------------- sponsored image styling --------------------------------------------------*/
+
+.main_picture {
+    display: grid;
+    grid-template: 1fr / 1fr;
+    width: 30.4vw;
+}
+
+.main_picture h3 {
+    width: 30.4vw;
+    height: 75vh;
+    grid-area: 1/1;
+    z-index: 2;
+    transform-origin: top left;
+    transform: rotate(-90deg) translateX(-75vh);
+    font-family: "Helvetica", helvetica, sans-serif;
+    font-size: 3em;
+    mix-blend-mode: soft-light;
+}
+
+.main_picture img {
+    grid-area: 1/1;
+    height: 75vh;
+
+}
+
+/* sponsored hover */
+.main_picture:hover {
+    width: 50vw;
+    z-index: 3;
+}
+
+.main_picture:hover h3 {
+    color: white;
+    mix-blend-mode: normal;
+    transform: rotate(0);
+}
+
+.main_picture:hover img {
+    width: 50vw;
+    height: auto;
+}
+
+/* ---------------------------------- second image styling --------------------------------------- */
+.second_picture {
+    display: grid;
+    grid-template: 1fr / 1fr;
+    width: 20.73vw;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.second_picture img {
+    grid-area: 1/1;
+    height: 75vh;
+}
+
+.second_picture h3 {
+    width: 20.73vw;
+    height: 75vh;
+    grid-area: 1/1;
+    z-index: 3;
+    transform-origin: top left;
+    transform: rotate(-90deg) translateX(-75vh);
+    font-family: "Helvetica", helvetica, sans-serif;
+    font-size: 3em;
+    mix-blend-mode: soft-light;
+}
+
+/* ---- second image hover ------ */
+.second_picture:hover {
+    width: 42vw;
+    height: 75vh;
+    z-index: 4;
+    overflow: visible;
+}
+
+.second_picture:hover img {
+    width: auto;
+    z-index: 4;
+}
+
+.second_picture:hover h3 {
+        color: white;
+    mix-blend-mode: normal;
+    transform: rotate(0);
+    z-index: 5;
+}
+
+/* ---------------------------------- third image styling --------------------------------------- */
+
+.three_picture_wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 20.73vw;
+    height:75vh;
+    z-index: 5;
+
+}
+
+.three_picture {
+    width: 20.73vw;
+    display: grid;
+    grid-template: 1fr/1fr;
+}
+
+.third_picture {
+    height: 25vh;
+    width: 20.73vw;
+    grid-area: 1/1
+}
+
+.three_picture h3 {
+    grid-area: 1/1;
+    z-index: 2;
+    mix-blend-mode: difference;
+    color: white;
+    text-align: center;
+    font-size: 2em;
+
+}
+
+
+/* third images hover */
+
+@keyframes growThird {
+    to {
+    width: 34.27vw;
+    z-index: 9;
+    }
+}
+.three_picture:hover {
+    justify-self: flex-end;
+    animation: growThird ease-in forwards;
+    transform-origin: bottom left;
+}
+
+.three_picture:hover img{
+    animation: growThird ease-in forwards;
+    transform-origin: bottom left;
+    height: auto;
+    grid-area: 1/1;
+
+}
+
+.three_picture:hover + three_picture {
+    height:auto;
+}
+
+.three_picture:hover h3 {
+    z-index: 10;
+}
+
+
+
+/* ---------------------------------- last image styling --------------------------------------- */
+
+.six_picture {
+    width: 13.54vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.six_picture div {
+    width: 13.54vw;
+    height: 12.5vh;
+}
+
+.six_picture div img {
+    max-width: 13.54vw;
+}
+
+/* ----------------------------------- END OF KALENDAR -------------------------------------------*/
+/* ----------------------------------- END OF KALENDAR -------------------------------------------*/
+/* ----------------------------------- END OF KALENDAR -------------------------------------------*/
+/* ----------------------------------- END OF KALENDAR -------------------------------------------*/
