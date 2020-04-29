@@ -13,6 +13,10 @@
     box-sizing: border-box;
 }
 
+h1 {
+    color: white;
+}
+
 /* -------------------------------------- -------------------------------------*/
 
 body {
@@ -94,7 +98,9 @@ body {
     border-radius: 10px;
 }
 
-
+/* ----------------------------- FOOTER START  --------------------------------------- */
+/* ----------------------------- FOOTER START  --------------------------------------- */
+/* ----------------------------- FOOTER START  --------------------------------------- */
 
 footer {
     -webkit-box-sizing: border-box;
@@ -264,21 +270,21 @@ right-col h1 {
 /* --------------------- Desktop calendar page --------------------------------------- */
 /* --------------------- Desktop calendar page --------------------------------------- */
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
 
-section {
+.wrapper_highlights{
     display: flex;
     flex-direction: row;
     height: 75vh;
     width: auto;
-    margin: 0 7.3vw 0 7.3vw;
+    margin: 0.2em 7.3vw 0.2em 7.3vw;
     overflow: hidden;
 }
 
+.highlight h1 {
+    font-size: 4em;
+    margin:0.2em;
+    margin-left: 7.3vw;
+}
 /* ------------------- sponsored image styling --------------------------------------------------*/
 
 .main_picture {
@@ -297,6 +303,8 @@ section {
     font-family: "Helvetica", helvetica, sans-serif;
     font-size: 3em;
     mix-blend-mode: soft-light;
+        margin: 0;
+    padding: 0;
 }
 
 .main_picture img {
@@ -346,6 +354,8 @@ section {
     font-family: "Helvetica", helvetica, sans-serif;
     font-size: 3em;
     mix-blend-mode: soft-light;
+    margin: 0;
+    padding: 0;
 }
 
 /* ---- second image hover ------ */
@@ -367,6 +377,7 @@ section {
     transform: rotate(0);
     z-index: 5;
 }
+
 
 /* ---------------------------------- third image styling --------------------------------------- */
 
