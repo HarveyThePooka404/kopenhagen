@@ -6,16 +6,16 @@ toggleButton.addEventListener('click', () => {
 })
 
 fetch("https://owldesign.dk/wordpress/wp-json/wp/v2/art_exhibition")
-.then(res => res.json())
-.then(handleData)
+    .then(res => res.json())
+    .then(handleData)
 
 function handleData(posts) {
- console.log(posts);
-posts.forEach(showPost)
+    console.log(posts);
+    posts.forEach(showPost)
 
 }
 
-function showPost(post){
+function showPost(post) {
     console.log(post)
     const template = document.querySelector("template").content;
 
@@ -29,9 +29,11 @@ function showPost(post){
 
     copy.querySelector(".artist").textContent = post.name_artist;
 
-    copy.querySelector(".start_date span").textContent = post.starting_date;
+    copy.querySelector(".start_date").textContent = post.starting_date;
 
-    copy.querySelector(".end_date span").textContent = post.ending_date;
+    copy.querySelector(".end_date").textContent = post.ending_date;
+
+    copy.querySelector(".exhibition_place").textContent = post.exhibition_place;
 
     document.querySelector("main").appendChild(copy);
 }
