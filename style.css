@@ -12,6 +12,10 @@
     font-family: "Helvetica", Helvetica, Ariel, serif;
 }
 
+h1 {
+    color:white;
+}
+
 @font-face {
     font-family: "CraftGothicBold";
 
