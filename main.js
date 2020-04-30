@@ -5,7 +5,8 @@ toggleButton.addEventListener('click', () => {
     navbarLinks.classList.toggle('active')
 })
 
-fetch("https://owldesign.dk/wordpress/wp-json/wp/v2/art_exhibition")
+
+fetch("https://owldesign.dk/wordpress/wp-json/wp/v2/art_exhibition?per_page=3&orderby=date")
     .then(res => res.json())
     .then(handleData)
 
