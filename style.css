@@ -28,7 +28,9 @@ h1 {
     font-style: normal;
 }
 
-/* -------------------------------------- -------------------------------------*/
+/* -------------------------------------- HOMEPAGE STYLING-------------------------------------*/
+/* -------------------------------------- HOMEPAGE STYLING-------------------------------------*/
+/* -------------------------------------- HOMEPAGE STYLING-------------------------------------*/
 
 body {
     background-color: #262626;
@@ -275,6 +277,250 @@ right-col h1 {
     }
 }
 
+body {
+    background-color: #262626;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #f5f5f5;
+    border-bottom: 1px solid white;
+}
+
+.logo img {
+    width: 400px;
+    margin: 1rem;
+}
+
+.navbar-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-links li {
+    list-style: none;
+    border-left: 1px solid white;
+}
+
+.main-link {
+    text-decoration: none;
+    color: #f5f5f5;
+    padding: 1rem;
+    display: block;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.sublink {
+    text-decoration: none;
+    color: #f5f5f5;
+    display: block;
+    text-align: end;
+    margin: 0 1rem .5rem 0;
+}
+
+.main-link:hover {
+    color: #dddddd;
+}
+
+.sublink:hover {
+    font-size: 0;
+}
+
+.sublink:hover:after {
+    content: attr(data-hover);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+}
+
+
+
+footer {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+
+footer {
+    background: #333333;
+    padding: 90px 0;
+}
+
+.footer-container {
+    max-width: 1300px;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    color: white;
+}
+
+.footer-logo {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.social-media {
+    margin: 20px 0;
+}
+
+.social-media a {
+    color: #D9B13B;
+    margin-right: 25px;
+    font-size: 22px;
+    text-decoration: none;
+    transition: .3s linear;
+}
+
+.social-media a:hover {
+    color: #D9A230;
+}
+
+.right-col {
+    width: 500px;
+    margin-bottom: 5rem;
+}
+
+right-col h1 {
+    font-size: 26px;
+}
+
+.border {
+    width: 100px;
+    height: 4px;
+    background: #D9B13B;
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.txtb {
+    flex: 1;
+    padding: 18px 40px;
+    font-size: 16px;
+    color: orange;
+    background: #ddd;
+    border: none;
+    font-weight: 700;
+    outline: none;
+    min-width: 260px;
+}
+
+.btn-s {
+    padding: 18px 40px;
+    font-size: 16px;
+    color: #262626;
+    background: #D9B13B;
+    border: none;
+    font-weight: 700;
+    outline: none;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: opacity .3s linear;
+}
+
+.btn {
+    padding: 18px 40px;
+    font-size: 16px;
+    color: #262626;
+    background: #D9B13B;
+    border: none;
+    font-weight: 700;
+    outline: none;
+    cursor: pointer;
+    transition: opacity .3s linear;
+    width: 100%;
+}
+
+.btn-s:hover {
+    background: #D9A230;
+}
+
+.btn:hover {
+    background: #D9A230;
+}
+
+
+
+
+/*-------------------MOBILE--------------------*/
+
+
+@media (max-width: 600px) {
+    .toggle-button {
+        display: flex;
+        margin-top: .5rem;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-links li {
+        text-align: center;
+    }
+
+    .navbar-links li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    .logo {
+        width: 300px;
+    }
+
+    .sublink {
+        text-align: center;
+    }
+
+    .footer-logo {
+        margin-top: 50px;
+    }
+}
 /*------------------------------------- Cartridge Styling -------------------------------------*/
 /*------------------------------------- Cartridge Styling -------------------------------------*/
 /*------------------------------------- Cartridge Styling -------------------------------------*/
