@@ -28,5 +28,5 @@ function showPost(post) {
 
     copy.querySelector(".exhibition_place").textContent = post.exhibition_place;
 
-    document.querySelector("main").appendChild(copy);
+    document.querySelector(".cartridge_wrapper").appendChild(copy);
 }
