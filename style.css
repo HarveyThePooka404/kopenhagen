@@ -280,6 +280,8 @@ right-col h1 {
 /*------------------------------------- Cartridge Styling -------------------------------------*/
 /*------------------------------------- Cartridge Styling -------------------------------------*/
 
+/* --- general --- */
+
 .cartridge_wrapper {
     display: grid;
     grid-gap: 2rem;
@@ -292,24 +294,23 @@ right-col h1 {
     grid-template-areas: 1/1;
     height: 45vh;
     overflow: hidden;
-    margin: 1em;
+    margin: 1em 0 1em 0 ;
 }
 
 .cartridge:hover .post_text {
-    display:block;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .cartridge:hover .post_img {
     filter: brightness(10%) grayscale(80%) contrast(80%);
 }
 
-.post_img {
-    display: flex;
-    flex-flow: column;
-    grid-area: 1/1;
-    z-index: 1;
-    width: 100%;
+.id {
+    display: none;
 }
+
 
 .post_text {
     height: 45vh;
@@ -319,12 +320,20 @@ right-col h1 {
     position: relative;
     color: white;
     display: none;
+
 }
 
 
-.id {
-    display: none;
+/* --- art exhibition cartridge --- */
+
+.post_img {
+    display: flex;
+    flex-flow: column;
+    grid-area: 1/1;
+    z-index: 1;
+    width: 100%;
 }
+
 
 .title {
     margin: 8px 0 2px 0;
@@ -341,4 +350,46 @@ h3.artist {
 
 .post_text p {
     margin: 4px 0 4px 0;
+}
+
+/* --- art space cartridge --- */
+
+.space_img {
+    display: flex;
+    flex-flow: column;
+    grid-area: 1/1;
+    z-index: 1;
+    width: 100%;
+}
+
+.name_space {
+    margin: 8px 0 2px 0;
+    font-family: "CraftGothicBold";
+    text-transform: uppercase;
+    font-weight: 1200;
+    font-size: 2em;
+}
+
+
+.website_space {
+    text-decoration: none;
+    color: white;
+}
+
+.website_space:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.cartridge:hover .space_img {
+    filter: brightness(10%) grayscale(80%) contrast(80%);
+}
+/*------------------------------------- Homepage Sections Styling ----------------------------------*/
+/*------------------------------------- Homepage Sections Styling ----------------------------------*/
+/*------------------------------------- Homepage Sections Styling ----------------------------------*/
+
+section h1 {
+    font-size: 3em;
+    margin: 7.3vw 7.3vw 0 7.3vw;
+
 }
