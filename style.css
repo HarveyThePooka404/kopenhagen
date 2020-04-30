@@ -12,41 +12,76 @@
     font-family: "Helvetica", Helvetica, Ariel, serif;
 }
 
+@font-face {
+    font-family: "CraftGothicBold";
+
+    src: url("./fonts/Fontspring-DEMO-CraftGothic-Bold.woff") format("woff"),
+        /* Modern Browsers */
+        url("./fonts/Fontspring-DEMO-CraftGothic-Bold.woff2") format("woff2");
+    /* Modern Browsers */
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* -------------------------------------- -------------------------------------*/
 
 
 /*------------------------------------- Cartridge Styling -------------------------------------*/
-section {
+/*------------------------------------- Cartridge Styling -------------------------------------*/
+/*------------------------------------- Cartridge Styling -------------------------------------*/
+
+.cartridge_wrapper {
     display: grid;
     grid-gap: 2rem;
-    grid-template-columns: repeat(auto-fill,minmax(800px, 300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(800px, 300px, 1fr));
 }
 
-.cartridge{
+.cartridge {
     display: grid;
     grid-template-areas: 1/1;
-    margin: 1rem;
-    padding: 1rem;
-    max-height: 25vh;
+    height: 25vh;
     overflow: hidden;
+    margin: 1em;
 }
 
 .post_img {
+    display: flex;
+    flex-flow: column;
     grid-area: 1/1;
     z-index: 1;
-    width: 100% ;
+    width: 100%;
     align-self: center;
     order: -1;
     top: -50%;
 }
 
 .post_text {
+    height: 25vh;
+    padding-left: 40%;
     grid-area: 1/1;
     z-index: 2;
     position: relative;
+    color: white;
 }
+
 
 .id {
     display: none;
 }
 
+.title {
+    margin: 8px 0 2px 0;
+    font-family: "CraftGothicBold";
+    text-transform: uppercase;
+    font-weight: 1200;
+    font-size: 2em;
+}
+
+
+h3.artist {
+    margin: 0;
+}
+
+.post_text p {
+    margin: 0;
+}
