@@ -384,6 +384,40 @@ h3.artist {
 .cartridge:hover .space_img {
     filter: brightness(10%) grayscale(80%) contrast(80%);
 }
+
+/* --- artist cartridge --- */
+
+.artist_img {
+    display: flex;
+    flex-flow: column;
+    grid-area: 1/1;
+    z-index: 1;
+    width: 100%;
+}
+
+.name_artist {
+    margin: 8px 0 2px 0;
+    font-family: "CraftGothicBold";
+    text-transform: uppercase;
+    font-weight: 1200;
+    font-size: 2em;
+}
+
+
+.website_artist {
+    text-decoration: none;
+    color: white;
+}
+
+.website_artist:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.cartridge:hover .artist_img {
+    filter: brightness(10%) grayscale(80%) contrast(80%);
+}
+
 /*------------------------------------- Homepage Sections Styling ----------------------------------*/
 /*------------------------------------- Homepage Sections Styling ----------------------------------*/
 /*------------------------------------- Homepage Sections Styling ----------------------------------*/

@@ -62,3 +62,34 @@ function showSpace(space) {
 
     document.querySelector(".cartridge_wrapper.space").appendChild(copy_space);
 }
+
+// starting same for artists
+
+fetch("https://owldesign.dk/wordpress/wp-json/wp/v2/artist?per_page=3&orderby=date")
+    .then(res => res.json())
+    .then(handleData3)
+
+function handleData3(artists) {
+    console.log(artists);
+    artists.forEach(showArtist)
+
+}
+
+function showArtist(artist) {
+    console.log(artist);
+    const template = document.querySelector(".template_artist").content;
+
+    const copy_artist = template.cloneNode(true);
+
+    copy_artist.querySelector(".id").textContent = artist.id;
+
+    copy_artist.querySelector(".artist_img").src = artist.thumbnail_artist.guid;
+
+    copy_artist.querySelector(".name_artist").textContent = artist.name_artist;
+
+    copy_artist.querySelector(".website_artist").textContent = artist.website_artist;
+
+    copy_artist.querySelector(".website_artist").href = artist.website_artist;
+
+    document.querySelector(".cartridge_wrapper.artist").appendChild(copy_artist);
+}
