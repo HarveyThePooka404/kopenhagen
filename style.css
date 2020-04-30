@@ -535,7 +535,7 @@ right-col h1 {
 .cartridge {
     display: grid;
     grid-template-areas: 1/1;
-    height: 35vh;
+    height: 45vh;
     overflow: hidden;
     margin: 1em;
 }
@@ -557,7 +557,7 @@ right-col h1 {
 }
 
 .post_text {
-    height: 35vh;
+    height: 45vh;
     padding-left: 40%;
     grid-area: 1/1;
     z-index: 2;
