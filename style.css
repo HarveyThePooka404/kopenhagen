@@ -17,6 +17,17 @@ h1 {
     color: white;
 }
 
+@font-face {
+    font-family: "CraftGothicBold";
+
+    src: url("./fonts/Fontspring-DEMO-CraftGothic-Bold.woff") format("woff"),
+        /* Modern Browsers */
+        url("./fonts/Fontspring-DEMO-CraftGothic-Bold.woff2") format("woff2");
+    /* Modern Browsers */
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* -------------------------------------- -------------------------------------*/
 
 body {
@@ -464,9 +475,13 @@ right-col h1 {
 
 /* ---------------------------------- Search --------------------------------------- */
 
-.search-wrapper {
-    height: 80%;
+.search-section {
+    min-height: 25em;
     padding: 1em;
+}
+
+.search-wrapper {
+    padding: 0 4em;
 }
 
 .txtb-search {
@@ -489,3 +504,71 @@ right-col h1 {
 /* ----------------------------------- END OF KALENDAR -------------------------------------------*/
 /* ----------------------------------- END OF KALENDAR -------------------------------------------*/
 /* ----------------------------------- END OF KALENDAR -------------------------------------------*/
+
+
+/*------------------------------------- Cartridge Styling -------------------------------------*/
+/*------------------------------------- Cartridge Styling -------------------------------------*/
+/*------------------------------------- Cartridge Styling -------------------------------------*/
+
+.cartridge_wrapper {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(800px, 300px, 1fr));
+    margin: 0 7.3vw 0 7.3vw;
+}
+
+.cartridge {
+    display: grid;
+    grid-template-areas: 1/1;
+    height: 35vh;
+    overflow: hidden;
+    margin: 1em;
+}
+
+.cartridge:hover .post_text {
+    display:block;
+}
+
+.cartridge:hover .post_img {
+    filter: brightness(10%) grayscale(80%) contrast(80%);
+}
+
+.post_img {
+    display: flex;
+    flex-flow: column;
+    grid-area: 1/1;
+    z-index: 1;
+    width: 100%;
+}
+
+.post_text {
+    height: 35vh;
+    padding-left: 40%;
+    grid-area: 1/1;
+    z-index: 2;
+    position: relative;
+    color: white;
+    display: none;
+}
+
+
+.id {
+    display: none;
+}
+
+.title {
+    margin: 8px 0 2px 0;
+    font-family: "CraftGothicBold";
+    text-transform: uppercase;
+    font-weight: 1200;
+    font-size: 2em;
+}
+
+
+h3.artist {
+    margin: 0;
+}
+
+.post_text p {
+    margin: 4px 0 4px 0;
+}

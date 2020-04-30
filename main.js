@@ -10,30 +10,53 @@ const template = document.querySelector("template").content;
 
 function search(value) {
 
-//    console.log(value);
-
     fetch(wpLink + `?search=${value}`)
         .then(f => f.json())
         .then((searchedData) => {
-
-            searchedData.forEach((i) => {
-                const copy = template.cloneNode(true);
-                copy.querySelector(".title-post").textContent = i.exhibition_place;
-                copy.querySelector(".content-post").textContent = i.long_description;
-
-                document.querySelector(".search-wrapper").appendChild(copy);
-            })
+            searchedData.forEach(showPost);
         });
 
-    if(value.length > 3){
+    if (value.length > 3) {
         document.querySelector("main").style.display = "none";
-        document.querySelector(".search-wrapper").style.display = "block";
+        document.querySelector(".search-section").style.display = "block";
     } else if (value.length <= 3) {
         document.querySelector("main").style.display = "block";
-        document.querySelector(".search-wrapper").style.display = "none";
+        document.querySelector(".search-section").style.display = "none";
     }
 
 
     //remove search from previous entries
-    document.querySelector(".search-wrapper").innerHTML='';
+    document.querySelector(".search-section").innerHTML = '';
+}
+
+function fetchData() {
+    fetch("https://owldesign.dk/wordpress/wp-json/wp/v2/art_exhibition?per_page=3&orderby=date")
+        .then(res => res.json())
+        .then(handleData)
+}
+
+function handleData(posts) {
+    console.log(posts);
+    posts.forEach(showPost)
+}
+
+function showPost(post) {
+
+    const copy = template.cloneNode(true);
+
+    copy.querySelector(".id").textContent = post.id;
+
+    copy.querySelector(".post_img").src = post.thumbnail.guid;
+
+    copy.querySelector(".title").textContent = post.name_exhibition;
+
+    copy.querySelector(".artist").textContent = post.name_artist;
+
+    copy.querySelector(".start_date").textContent = post.starting_date;
+
+    copy.querySelector(".end_date").textContent = post.ending_date;
+
+    copy.querySelector(".exhibition_place").textContent = post.exhibition_place;
+
+    document.querySelector(".search-wrapper").appendChild(copy);
 }
