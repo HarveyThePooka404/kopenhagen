@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+h<!DOCTYPE html>
 <html lang="">
 <head>
     <meta charset="utf-8">
@@ -26,12 +26,18 @@
                     <a href="#" class="sublink" data-hover="● articles">articles</a>
                     <a href="#" class="sublink" data-hover="● critique">critique</a>
                     <a href="#" class="sublink" data-hover="● reviews">reviews</a>
-                </li><li>
+                </li>
+                <li>
                     <a href="#" class="main-link">Gallery</a>
                     <a href="#" class="sublink" data-hover="● artists">artists</a>
                     <a href="#" class="sublink" data-hover="● places">places</a>
                     <a href="#" class="sublink" data-hover="● art styles">art styles</a>
                 </li>
+                <li>
+                    <a href="#" class="main-link">Search</a>
+                    <input oninput="search(this.value)" type="search" class="txtb-search" placeholder="search...">
+                </li>
+
             </ul>
         </div>
         <a href="#" class="toggle-button">
@@ -102,6 +108,13 @@
 
     </section>
 </main>
+
+  <div class="search-wrapper">
+   <template>
+       <h1 class="title-post"></h1>
+       <h1 class="content-post"></h1>
+   </template>
+   </div>
 
     <footer>
         <div class="footer-container">

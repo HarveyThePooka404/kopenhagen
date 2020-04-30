@@ -462,6 +462,29 @@ right-col h1 {
     max-width: 13.54vw;
 }
 
+/* ---------------------------------- Search --------------------------------------- */
+
+.search-wrapper {
+    height: 80%;
+    padding: 1em;
+}
+
+.txtb-search {
+    flex: 1;
+    padding: .5em .5em;
+    font-size: 16px;
+    font-weight: 700;
+    color: #D9B13B;
+    background: #ddd;
+    outline: none;
+    border: none;
+    width: 9rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: .5em;
+}
+
 /* ----------------------------------- END OF KALENDAR -------------------------------------------*/
 /* ----------------------------------- END OF KALENDAR -------------------------------------------*/
 /* ----------------------------------- END OF KALENDAR -------------------------------------------*/
