@@ -10,6 +10,9 @@ const template = document.querySelector("template").content;
 
 function search(value) {
 
+    //remove search from previous entries
+    document.querySelector(".search-wrapper").innerHTML = '';
+
     fetch(wpLink + `?search=${value}`)
         .then(f => f.json())
         .then((searchedData) => {
@@ -24,8 +27,6 @@ function search(value) {
         document.querySelector(".search-section").style.display = "none";
     }
 
-    //remove search from previous entries
-    document.querySelector(".search-wrapper").innerHTML = '';
 }
 
 function fetchData() {

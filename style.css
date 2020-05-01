@@ -478,6 +478,7 @@ right-col h1 {
 .search-section {
     min-height: 25em;
     padding: 1em;
+    display: none;
 }
 
 .search-wrapper {
