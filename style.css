@@ -27,6 +27,19 @@ h1 {
     font-style: normal;
 }
 
+/* -------------------------------------- Buttons -------------------------------------*/
+
+.see_more {
+    color: white;
+    border: solid var(--dark-yellow) 3px;
+    background-color: transparent;
+    font-family: "Helvetica";
+    font-size: 4em;
+    margin-left: 40vw;
+    margin-bottom: 1em;
+
+}
+
 /* -------------------------------------- HOMEPAGE STYLING-------------------------------------*/
 /* -------------------------------------- HOMEPAGE STYLING-------------------------------------*/
 /* -------------------------------------- HOMEPAGE STYLING-------------------------------------*/
