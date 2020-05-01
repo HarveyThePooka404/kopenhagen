@@ -271,7 +271,7 @@ right-col h1 {
 /* --------------------- Desktop calendar page --------------------------------------- */
 
 
-.wrapper_highlights{
+.wrapper_highlights {
     display: flex;
     flex-direction: row;
     height: 75vh;
@@ -280,11 +280,13 @@ right-col h1 {
     overflow: hidden;
 }
 
-.highlight h1 {
+.highlight h1,
+.calendar_per_date h1 {
     font-size: 4em;
-    margin:0.2em;
+    margin: 0.2em;
     margin-left: 7.3vw;
 }
+
 /* ------------------- sponsored image styling --------------------------------------------------*/
 
 .main_picture {
@@ -303,7 +305,7 @@ right-col h1 {
     font-family: "Helvetica", helvetica, sans-serif;
     font-size: 3em;
     mix-blend-mode: soft-light;
-        margin: 0;
+    margin: 0;
     padding: 0;
 }
 
@@ -314,6 +316,8 @@ right-col h1 {
 }
 
 /* sponsored hover */
+@media (min-width: 1024px) {
+
 .main_picture:hover {
     width: 50vw;
     z-index: 3;
@@ -326,10 +330,18 @@ right-col h1 {
 }
 
 .main_picture:hover img {
-    width: 50vw;
-    height: auto;
-}
+    width: 70vw;
+    height:100%;
+    }}
 
+/* small mobile */
+@media (max-width: 1023px) {
+
+    .main_picture {
+        width: 100vw;
+    }
+
+    }}
 /* ---------------------------------- second image styling --------------------------------------- */
 .second_picture {
     display: grid;
@@ -372,7 +384,7 @@ right-col h1 {
 }
 
 .second_picture:hover h3 {
-        color: white;
+    color: white;
     mix-blend-mode: normal;
     transform: rotate(0);
     z-index: 5;
@@ -385,7 +397,7 @@ right-col h1 {
     display: flex;
     flex-direction: column;
     width: 20.73vw;
-    height:75vh;
+    height: 75vh;
     z-index: 5;
 
 }
@@ -417,17 +429,18 @@ right-col h1 {
 
 @keyframes growThird {
     to {
-    width: 34.27vw;
-    z-index: 9;
+        width: 34.27vw;
+        z-index: 9;
     }
 }
+
 .three_picture:hover {
     justify-self: flex-end;
     animation: growThird ease-in forwards;
     transform-origin: bottom left;
 }
 
-.three_picture:hover img{
+.three_picture:hover img {
     animation: growThird ease-in forwards;
     transform-origin: bottom left;
     height: auto;
@@ -436,7 +449,7 @@ right-col h1 {
 }
 
 .three_picture:hover + three_picture {
-    height:auto;
+    height: auto;
 }
 
 .three_picture:hover h3 {
@@ -462,7 +475,151 @@ right-col h1 {
     max-width: 13.54vw;
 }
 
+/* ---------------------------------- Current Exhibitions --------------------------------------- */
+/* ---------------------------------- Current Exhibitions --------------------------------------- */
+/* ---------------------------------- Current Exhibitions --------------------------------------- */
+
+.calendar_wrapper {
+    color: white;
+    margin: 0 7.3vw 0 7.3vw;
+    font-size: 2em;
+}
+
+input {
+    size: 2em;
+}
+
+/*------------------------------------- Cartridge Styling -------------------------------------*/
+/*------------------------------------- Cartridge Styling -------------------------------------*/
+/*------------------------------------- Cartridge Styling -------------------------------------*/
+
+/* --- general --- */
+
+.cartridge_wrapper {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(800px, 300px, 1fr));
+    margin: 0 7.3vw 0 7.3vw;
+}
+
+.cartridge {
+    display: grid;
+    grid-template-areas: 1/1;
+    height: 45vh;
+    overflow: hidden;
+    margin: 1em 0 1em 0;
+}
+
+.cartridge:hover .post_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cartridge:hover .post_img {
+    filter: brightness(10%) grayscale(80%) contrast(80%);
+}
+
+.id {
+    display: none;
+}
+
+
+.post_text {
+    height: 45vh;
+    padding-left: 40%;
+    grid-area: 1/1;
+    z-index: 2;
+    position: relative;
+    color: white;
+    display: none;
+
+}
+
+
+/* --- art exhibition cartridge --- */
+
+.post_img {
+    display: flex;
+    flex-flow: column;
+    grid-area: 1/1;
+    z-index: 1;
+    width: 100%;
+}
+
+
+.title {
+    margin: 8px 0 2px 0;
+    font-family: "CraftGothicBold";
+    text-transform: uppercase;
+    font-weight: 1200;
+    font-size: 2em;
+}
+
+
+h3.artist {
+    margin: 0;
+}
+
+.post_text p {
+    margin: 4px 0 4px 0;
+}
+
+
 /* ----------------------------------- END OF KALENDAR -------------------------------------------*/
 /* ----------------------------------- END OF KALENDAR -------------------------------------------*/
 /* ----------------------------------- END OF KALENDAR -------------------------------------------*/
 /* ----------------------------------- END OF KALENDAR -------------------------------------------*/
+
+
+/* ----------------------------------- KALENDAR MOBILE -------------------------------------------*/
+
+@media (max-width: 600px) {
+    .wrapper_highlights {
+        display: flex;
+        flex-direction: column;
+        height: 75vh;
+        width: 100vw;
+        margin: 0.2em 7.3vw 0.2em 7.3vw;
+        overflow: hidden;
+    }
+
+    .cartridge_wrapper {
+    display: grid;
+    grid-gap: 0.2rem;
+    grid-template-columns: repeat(auto-fill, minmax(800px, 300px, 1fr));
+    margin: 0 7.3vw 0 7.3vw;
+}
+    .cartridge .post_text {
+        height:20vh;
+        padding: 0.5em;
+        grid-area: 1/1;
+        z-index: 2;
+        position: relative;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .cartridge .post_img {
+    filter: brightness(30%) grayscale(40%) contrast(60%);
+}
+    .title {
+    margin: 8px 0 2px 0;
+    font-family: "CraftGothicBold";
+    text-transform: uppercase;
+    font-size: 1em;
+    }
+
+    .post_img {
+    display: flex;
+    flex-flow: column;
+    grid-area: 1/1;
+    z-index: 1;
+    width:100%;
+}
+    .cartridge {
+        height:20vh;
+    }
+}
