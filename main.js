@@ -24,9 +24,8 @@ function search(value) {
         document.querySelector(".search-section").style.display = "none";
     }
 
-
     //remove search from previous entries
-    document.querySelector(".search-section").innerHTML = '';
+    document.querySelector(".search-wrapper").innerHTML = '';
 }
 
 function fetchData() {
@@ -57,6 +56,6 @@ function showPost(post) {
     copy.querySelector(".end_date").textContent = post.ending_date;
 
     copy.querySelector(".exhibition_place").textContent = post.exhibition_place;
-
+    console.log(copy);
     document.querySelector(".search-wrapper").appendChild(copy);
 }
