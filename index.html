@@ -42,30 +42,75 @@
             <span class="bar"></span>
         </a>
     </nav>
-    <main>
-        <section class="highlighted_picture"></section>
-        <section class="see_exhibition"></section>
-                   <h1>Current Exhibitions</h1>
-
-        <section class="learn_article"></section>
-        <section class="art_spaces"></section>
-
-
-        <section class="cartridge_wrapper">
-            <article class="cartridge">
-               <template>
-                <div class="id">id</div>
-                <img class="post_img" src="" alt="">
-                <div class="post_text">
-                    <h2 class="title">title</h2>
-                    <h3 class="artist">type </h3>
-                    <p class="date_exhibition"><span class="start_date">start date</span> // <span class="end_date">end date</span></p>
-                    <p class="exhibition_place">art space</p>
-                    <p class="tags"></p>
-                </div>
-                </template>
-            </article>
+        <main>
+        <section class="highlighted_picture">
+            <img src="../assets/Louisiana_on_Paper.jpg" alt="">
         </section>
+        <section class="see_exhibition">
+            <h1>Current Exhibitions</h1>
+            <div class="cartridge_wrapper art">
+                <template class="template_exh">
+
+                    <article class="cartridge">
+                        <div class="id">id</div>
+                        <img class="post_img" src="" alt="">
+                        <div class="post_text">
+                            <h2 class="title">title</h2>
+                            <h3 class="artist">type </h3>
+                            <p class="date_exhibition"><span class="start_date">start date</span> // <span class="end_date">end date</span></p>
+                            <p class="exhibition_place">art space</p>
+                            <p class="tags"></p>
+
+
+                        </div>
+                    </article>
+                </template>
+            </div>
+            <button class="see_more">See more</button>
+        </section>
+
+        <section class="art_spaces">
+            <h1>Art spaces around Copenhagen</h1>
+            <div class="cartridge_wrapper space">
+                <template class="template_space">
+
+                    <article class="cartridge">
+                        <div class="id">id</div>
+                        <img class="space_img" src="" alt="">
+                        <div class="post_text">
+                            <h2 class="name_space">title</h2>
+                            <h3 class="address_space">type</h3>
+                            <p><a class="website_space" href="" target="_blank"></a></p>
+
+                        </div>
+                    </article>
+                </template>
+            </div>
+            <button class="see_more">See more</button>
+        </section>
+
+        <section>
+
+            <section class="artists">
+                <h1>Artists</h1>
+                <div class="cartridge_wrapper artist">
+                    <template class="template_artist">
+
+                        <article class="cartridge">
+                            <div class="id">id</div>
+                            <img class="artist_img" src="" alt="">
+                            <div class="post_text">
+                                <h2 class="name_artist">title</h2>
+                                <p><a class="website_artist" href="" target="_blank"></a></p>
+
+                            </div>
+                        </article>
+                    </template>
+                </div>
+                <button class="see_more">See more</button>
+            </section>
+        </section>
+
     </main>
 
      <footer>
