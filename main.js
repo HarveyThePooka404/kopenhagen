@@ -1,12 +1,6 @@
-const toggleButton = document.getElementsByClassName('toggle-button')[0]
-const navbarLinks = document.getElementsByClassName('navbar-links')[0]
-
-toggleButton.addEventListener('click', () => {
-    navbarLinks.classList.toggle('active')
-})
-
 const wpLink = 'http://owldesign.dk/wordpress/wp-json/wp/v2/art_exhibition';
 const template = document.querySelector("template").content;
+
 
 function search(value) {
 
@@ -27,17 +21,6 @@ function search(value) {
         document.querySelector(".search-section").style.display = "none";
     }
 
-}
-
-function fetchData() {
-    fetch("https://owldesign.dk/wordpress/wp-json/wp/v2/art_exhibition?per_page=3&orderby=date")
-        .then(res => res.json())
-        .then(handleData)
-}
-
-function handleData(posts) {
-    console.log(posts);
-    posts.forEach(showPost)
 }
 
 function showPost(post) {
