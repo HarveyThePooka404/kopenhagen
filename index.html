@@ -33,7 +33,11 @@
                     <a href="#" class="sublink" data-hover="● artists">artists</a>
                     <a href="#" class="sublink" data-hover="● places">places</a>
                     <a href="#" class="sublink" data-hover="● art styles">art styles</a>
+                <li>
+                    <a href="#" class="main-link">Search</a>
+                    <input oninput="search(this.value)" type="search" class="txtb-search" placeholder="search...">
                 </li>
+
             </ul>
         </div>
         <a href="#" class="toggle-button">
@@ -116,6 +120,47 @@
         </section>
 
     </main>
+
+    <div class="search-section">
+       <div class="search-controls">
+        <h1>Search Results</h1>
+        <div class="dropdown">
+            <span>Sort by</span>
+            <div class="dropdown-content">
+                <p>Name</p>
+                <p>Date</p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <span>Filter</span>
+            <div class="dropdown-content">
+                <p>Articles</p>
+                <p>Galleries</p>
+                <p>Institutions</p>
+            </div>
+        </div>
+        </div>
+        <div class="search-wrapper">
+    </div>
+    </div>
+
+    <template>
+        <section class="cartridge_wrapper">
+            <article class="cartridge">
+                <div class="id">id</div>
+                <img class="post_img" src="" alt="">
+                <div class="post_text">
+                    <h2 class="title">title</h2>
+                    <h3 class="artist">type </h3>
+                    <p class="date_exhibition"><span class="start_date">start date</span> // <span class="end_date">end date</span></p>
+                    <p class="exhibition_place">art space</p>
+                    <p class="tags"></p>
+
+                </div>
+            </article>
+        </section>
+    </template>
+
     <footer>
         <div class="footer-container">
             <div class="right-col">
@@ -158,8 +203,8 @@
             </div>
         </div>
     </footer>
+        <script src="main.js"></script>
 
-    <script src="main.js"></script>
-</body>
-
+    </body>
 </html>
+

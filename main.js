@@ -17,10 +17,56 @@ function handleData(posts) {
 
 }
 
-function showPost(post) {
-    console.log(post)
+const template = document.querySelector(".template_exh").content;
 
-    const template = document.querySelector(".template_exh").content;
+const wpLink = 'http://owldesign.dk/wordpress/wp-json/wp/v2/art_exhibition';
+
+
+function search(value) {
+
+    //remove search from previous entries
+    document.querySelector(".search-wrapper").innerHTML = '';
+    console.log(value);
+
+    fetch(wpLink + `?search=${value}`)
+        .then(f => f.json())
+        .then((searchedData) => {
+            searchedData.forEach(showPostSearch);
+        });
+
+    if (value.length > 3) {
+        document.querySelector("main").style.display = "none";
+        document.querySelector(".search-section").style.display = "block";
+    } else if (value.length <= 3) {
+        document.querySelector("main").style.display = "block";
+        document.querySelector(".search-section").style.display = "none";
+    }
+
+}
+
+function showPostSearch(post) {
+
+    const copy = template.cloneNode(true);
+
+    copy.querySelector(".id").textContent = post.id;
+
+    copy.querySelector(".post_img").src = post.thumbnail.guid;
+
+    copy.querySelector(".title").textContent = post.name_exhibition;
+
+    copy.querySelector(".artist").textContent = post.name_artist;
+
+    copy.querySelector(".start_date").textContent = post.starting_date;
+
+    copy.querySelector(".end_date").textContent = post.ending_date;
+
+    copy.querySelector(".exhibition_place").textContent = post.exhibition_place;
+
+    document.querySelector(".search-wrapper").appendChild(copy);
+
+}
+
+function showPost(post){
 
     const copy = template.cloneNode(true);
 
@@ -126,7 +172,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     //then?
 
-
+    //make search empty
+    document.getElementById("searchbox").value = "";
 });
 
 // Changing date
