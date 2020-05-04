@@ -341,13 +341,14 @@ right-col h1 {
         width: 100vw;
     }
 
-    }}
+    }
 /* ---------------------------------- second image styling --------------------------------------- */
 .second_picture {
     display: grid;
-    grid-template: 1fr / 1fr;
+    grid-template: 1fr/1fr;
     width: 20.73vw;
-    z-index: 2;
+    height:75vh;
+    z-index: 4;
     overflow: hidden;
 }
 
@@ -366,6 +367,7 @@ right-col h1 {
     font-family: "Helvetica", helvetica, sans-serif;
     font-size: 3em;
     mix-blend-mode: soft-light;
+    color: white;
     margin: 0;
     padding: 0;
 }
@@ -417,7 +419,7 @@ right-col h1 {
 .three_picture h3 {
     grid-area: 1/1;
     z-index: 2;
-    mix-blend-mode: difference;
+    mix-blend-mode: soft-light;
     color: white;
     text-align: center;
     font-size: 2em;
