@@ -10,7 +10,7 @@ function search(value) {
     fetch(wpLink + `?search=${value}`)
         .then(f => f.json())
         .then((searchedData) => {
-            searchedData.forEach(showPost);
+            searchedData.forEach(showPostSearch);
         });
 
     if (value.length > 3) {
