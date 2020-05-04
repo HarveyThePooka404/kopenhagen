@@ -23,7 +23,7 @@ function search(value) {
 
 }
 
-function showPost(post) {
+function showPostSearch(post) {
 
     const copy = template.cloneNode(true);
 
